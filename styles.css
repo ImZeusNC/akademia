@@ -1,0 +1,14 @@
+:root {
+    --azul-principal: #0A3A5A;
+    --azul-secundario: #1F4373;
+    --azul-terciario: #274C9B;
+    --azul-cuaternario: #3558B3;
+    --azul-destacado: #3B82F6;
+    --dorado: #D4AF37;
+    --fondo-principal: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
