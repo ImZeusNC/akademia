@@ -11,4 +11,126 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Inter';
+}
+
+header {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--dorado) solid 1px;
+
+   .header-title {
+        padding-left: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        h1 {
+            a {
+                text-decoration: none;
+                color: var(--azul-principal);
+            }
+        }
+
+        .divisor {
+           width: 1px; background-color: var(--dorado); height: 35px; margin-left: 20px;
+        }
+
+        .header-nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            a {
+                color: var(--azul-principal);
+                text-decoration: none;
+            }
+        }
+    
+   }
+
+   .social-media {
+        padding-right: 30px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+
+        .menu-btn {
+            display: none;
+        }
+   }
+}
+
+.menu-activo {
+    display: block;
+}
+
+.menu-btn {
+    display: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+@media (max-width: 1080px) {
+
+    header {
+        .header-title{
+
+            .header-nav-links.menu-activo {
+                display: block;
+            }
+
+            .header-nav-links {
+                gap: 0;
+                left: 0;
+                top: 60px;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                display: none;
+
+                li {
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    cursor: pointer;
+                    border-bottom: var(--dorado) solid 1px;
+                    background-color: var(--azul-secundario);
+                    display: flex;
+
+                    a {
+                        width: 100%;
+                        padding: 25px;
+                        color: white;
+                        text-align: center;
+                    }
+                }
+
+            }
+
+            .divisor {
+                display: none;
+            }
+        
+        }
+
+        .social-media {
+            .menu-btn {
+                display: block;
+            }
+        }
+    
+    }
 }
