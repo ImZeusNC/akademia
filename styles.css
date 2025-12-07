@@ -14,6 +14,8 @@ body {
     font-family: 'Inter';
 }
 
+/* estilos del header */
+
 header {
     display: flex;
     height: 60px;
@@ -21,6 +23,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
     border-bottom: var(--dorado) solid 1px;
 
    .header-title {
@@ -37,7 +40,10 @@ header {
         }
 
         .divisor {
-           width: 1px; background-color: var(--dorado); height: 35px; margin-left: 20px;
+           width: 1px; 
+           background-color: var(--dorado);
+           height: 35px; 
+           margin-left: 20px;
         }
 
         .header-nav-links {
@@ -66,6 +72,8 @@ header {
    }
 }
 
+/* menu interactivo */
+
 .menu-activo {
     display: block;
 }
@@ -79,6 +87,77 @@ header {
     cursor: pointer;
     font-size: 25px;
 }
+
+/* hero */
+
+.hero {
+    background-color: var(--azul-secundario);
+    width: 100%;
+    height: 100vh;
+
+    .portada {
+        padding: 0px 5%;
+        display: flex;
+        height: 90%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+
+        .portada-titulo {
+            min-width: 45%;
+            display: flex;
+            color: white;
+            padding: 20px;
+            flex-direction: column;
+            text-align: left;
+
+            h2 {
+                margin: 0;
+                text-align: left;
+                font-size: xxx-large;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            button {
+                cursor: pointer;
+                background-color: white;
+                padding: 7px;
+                font-size: medium;
+                border: black solid 1px;
+                border-radius: 1px;
+                color: var(--azul-secundario);
+                font-weight: bolder;
+                width: 150px;
+            }
+        }
+
+        .portada-imagen {
+            height: 100%;
+            align-content: center;
+            text-align: center;
+            img {
+                height: auto;
+                width: 50%;
+            }
+        }
+
+        i {
+            font-size: 80px;
+            color: white;
+            position: absolute;
+            left: 50;
+            bottom: 0;
+            padding-bottom: 10px;
+        }
+    }
+    
+}
+
+/* media querys */
 
 @media (max-width: 1080px) {
 
@@ -107,7 +186,7 @@ header {
                     width: 100%;
                     cursor: pointer;
                     border-bottom: var(--dorado) solid 1px;
-                    background-color: var(--azul-secundario);
+                    background-color: var(--azul-terciario);
                     display: flex;
 
                     a {
@@ -132,5 +211,43 @@ header {
             }
         }
     
+    }
+
+    .hero {
+        .portada {
+            flex-direction: column-reverse;
+
+            .portada-imagen {
+                height: 20%;
+
+                img {
+                    height: auto;
+                    width: 300px;
+                }
+            }
+
+            .portada-titulo {
+                align-items: center;
+
+                h2 {
+                    text-align: center;
+                }
+
+                p {
+                    text-align: center;
+                }
+                
+                button {
+                    font-size: larger;
+                    padding: 20px;
+                    width: 80%;
+                }
+                
+            }
+
+            i {
+                display: none;
+            }
+        }
     }
 }
