@@ -93,19 +93,23 @@ header {
 .hero {
     background-color: var(--azul-secundario);
     width: 100%;
-    overflow: hidden;
-    height: auto;
-    min-height: 100vh;
+    min-height: 750px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
 
     .portada {
         min-height: 700px;
         padding: 0px 5%;
-        display: flex;
-        height: 90%;
+        display: grid;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        gap: 10px;
+        gap: 30px;
+        grid-template-areas: "portada-titulo portada-imagen"
+                             "arrow arrow";
+        grid-template-rows: auto 80px;
 
         .portada-titulo {
             min-width: 45%;
@@ -148,6 +152,14 @@ header {
             }
         }
 
+        i {
+            grid-area: 2 / 1 / span 1 / span 2;
+            font-size: 60px;
+            color: white;
+            justify-self: center;
+            align-self: end;
+        }
+
     }
    
 }
@@ -161,7 +173,8 @@ header {
 
     .cascada-item {
         color: var(--azul-principal);
-
+        border-bottom: var(--azul-principal) solid 2px;
+        padding: 30px 80px;
         h2 {    
             margin: 0;
             text-align: left;
@@ -176,8 +189,87 @@ header {
     }
 }
 
+/* servicios */
+.servicios {
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: var(--azul-principal) solid 2px;
 
+    h2 {
+        color: var(--azul-principal);
+        margin: 0;
+        text-align: left;
+        font-size: xxx-large;
+    }
 
+    .servicios-grid {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(3, auto);
+        gap: 25px;
+
+        .servicios-grid-item {
+            padding: 20px 20px;
+            text-align: left;
+            color: white;
+        }
+    }
+}
+
+/* bg-color auxliares */
+.bg-1 {
+    background-color: var(--azul-secundario);
+}
+
+.bg-2 {
+    background-color: var(--azul-terciario);
+}
+
+.bg-3 {
+    background-color: var(--azul-cuaternario);
+}
+
+/* razones */
+.razones {
+    background-image: url(/razones-bg.png);
+    background-repeat: round;
+    background-size: cover;
+    margin: 30px 80px;
+    padding-right: 45%;
+    padding-left: 40px;
+    justify-content: center;
+    align-items: start;
+    min-height: 600px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+
+    h2 {
+        margin: 0;
+        font-size: xxx-large;
+    }
+}
+
+/* footer */
+
+footer {
+    background-color: var(--azul-principal);
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    
+    p {
+        color: white;
+
+        span {
+            font-weight: bolder;
+        }
+    }
+}
 
 /* media querys */
 
@@ -217,7 +309,7 @@ header {
                     width: 100%;
                     cursor: pointer;
                     border-bottom: var(--dorado) solid 1px;
-                    background-color: var(--azul-terciario);
+                    background-color: var(--azul-principal);
                     display: flex;
 
                     a {
@@ -248,9 +340,14 @@ header {
 
     .hero {
         .portada {
-            flex-direction: column-reverse;
+            display: grid;
+            grid-template-areas: "portada-imagen portada-imagen"
+                                  "portada-titulo portada-titulo"
+                                  "arrow arrow";
+            grid-template-rows: auto auto 50px;
 
             .portada-imagen {
+                grid-area: portada-imagen;
                 height: 20%;
 
                 img {
@@ -259,7 +356,12 @@ header {
                 }
             }
 
+            .portada-imagen {
+                padding-bottom: 100px;
+            }
+
             .portada-titulo {
+                grid-area: portada-titulo;
                 align-items: center;
 
                 h2 {
@@ -277,6 +379,10 @@ header {
                 }
                 
             }
+
+            i {
+                grid-area: arrow;
+            }
         }
     }
 
@@ -286,4 +392,30 @@ header {
         grid-template-rows: auto auto;
     }
 
+    /* servicios mobile*/
+    .servicios {
+        .servicios-grid {
+            grid-template-columns: repeat(2, auto);
+            .servicios-grid-item {
+                padding: 20px 15px;
+            }
+        }
+    }
+
+    /* razones mobile */
+    .razones {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: -300px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 750px) {
+    /* razones mobile */
+    .razones {
+        background-position: -420px;
+        margin: 0;
+    }
 }
