@@ -57,6 +57,11 @@ header {
                 text-decoration: none;
             }
         }
+
+        .header-nav-links a:hover {
+            font-weight: 700;
+            transform: scale(1.1);
+        }
     
    }
 
@@ -182,10 +187,57 @@ header {
         }
     }
 
+     /* carrusel */
     .carrusel {
+        display: flex;
+        flex-direction: row;
         background-color: var(--azul-secundario);
-        align-content: center;
-        text-align: center;
+        min-height: 600px;
+        overflow-x: auto;
+
+        .carrusel-item {
+            flex: 0 0 auto;
+            max-width: calc(100% - 60px);
+            background-color: white;
+            color: var(--azul-principal);
+            font-weight: 600;
+            font-size: 22px;
+            border-radius: 8px;
+            width: 100%;
+            margin: 30px;
+            padding: 10px 0px;
+            display: grid;
+            grid-template-rows: 60px 40px auto 60px;
+            box-shadow: 15px 8px 20px rgba(9, 0, 0, 0.4);
+
+            .carrusel-item-title {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0px 50px;
+                border-bottom: var(--azul-principal) solid 2px;
+            }
+
+            .carrusel-item-body-redes {
+                padding: 15px 50px;
+                align-items: center;
+            }
+
+            .carrusel-item-body {
+                align-items: start;
+                padding: 0px 50px;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            .carrusel-item-lang {
+                font-weight: 300;
+                padding: 0px 50px;
+            }
+
+        }
     }
 }
 
@@ -214,6 +266,12 @@ header {
             padding: 20px 20px;
             text-align: left;
             color: white;
+            
+        }
+
+        .servicios-grid-item:hover {
+            box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
         }
     }
 }
@@ -392,6 +450,14 @@ footer {
         grid-template-rows: auto auto;
     }
 
+      /* carrusel mobile */
+    .carrusel {
+        .carrusel-item {
+            margin: 5px;
+        }
+
+    }
+
     /* servicios mobile*/
     .servicios {
         .servicios-grid {
@@ -413,6 +479,18 @@ footer {
 }
 
 @media (max-width: 750px) {
+
+    /* carrusel mobile */
+    .carrusel {
+        .carrusel-item {
+            font-size: 16px !important;
+            .carrusel-item-lang {
+                padding-left: 50px !important;
+                padding-right: 0px !important;
+            }
+        }
+    }
+
     /* razones mobile */
     .razones {
         background-position: -420px;
