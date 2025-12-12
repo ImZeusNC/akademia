@@ -12,6 +12,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter';
+    background-color: var(--azul-secundario);
 }
 
 /* estilos del header */
@@ -177,6 +178,7 @@ header {
     grid-template-columns: 50% 50%;
 
     .cascada-item {
+        background-color: white;
         color: var(--azul-principal);
         border-bottom: var(--azul-principal) solid 2px;
         padding: 30px 80px;
@@ -188,27 +190,24 @@ header {
     }
 
      /* carrusel */
-    .carrusel {
-        display: flex;
-        flex-direction: row;
+    .swiper {
+        height: calc(100% - 30px);
+        min-height: 500px;
+        width: calc(100% - 30px);
         background-color: var(--azul-secundario);
-        min-height: 600px;
-        overflow-x: auto;
+        align-self: center;
 
         .carrusel-item {
-            flex: 0 0 auto;
-            max-width: calc(100% - 60px);
             background-color: white;
+            height: 90%;
+            width: 90%;
             color: var(--azul-principal);
             font-weight: 600;
             font-size: 22px;
             border-radius: 8px;
-            width: 100%;
-            margin: 30px;
             padding: 10px 0px;
             display: grid;
             grid-template-rows: 60px 40px auto 60px;
-            box-shadow: 15px 8px 20px rgba(9, 0, 0, 0.4);
 
             .carrusel-item-title {
                 align-items: center;
@@ -243,6 +242,7 @@ header {
 
 /* servicios */
 .servicios {
+    background-color: white;
     padding: 30px 80px;
     display: flex;
     flex-direction: column;
@@ -290,27 +290,33 @@ header {
 }
 
 /* razones */
-.razones {
-    background-image: url(/razones-bg.png);
-    background-repeat: round;
-    background-size: cover;
-    margin: 30px 80px;
-    padding-right: 45%;
-    padding-left: 40px;
-    justify-content: center;
-    align-items: start;
-    min-height: 600px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: left;
 
-    h2 {
-        margin: 0;
-        font-size: xxx-large;
+.razones-contenedor {
+    background-color: white;
+
+    .razones {
+        background-image: url(/razones-bg.png);
+        background-repeat: round;
+        background-size: cover;
+        margin: 0px 80px;
+        padding-right: 45%;
+        padding-left: 40px;
+        justify-content: center;
+        align-items: start;
+        min-height: 600px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
+
+        h2 {
+            margin: 0;
+            font-size: xxx-large;
+        }
     }
 }
+
 
 /* footer */
 
@@ -451,10 +457,9 @@ footer {
     }
 
       /* carrusel mobile */
-    .carrusel {
-        .carrusel-item {
-            margin: 5px;
-        }
+    .swiper {
+        min-height: 400px;
+        margin: 20px;
 
     }
 
@@ -469,13 +474,16 @@ footer {
     }
 
     /* razones mobile */
-    .razones {
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: -300px;
-        padding-left: 40px;
-        padding-right: 40px;
+    .razones-contenedor {
+        .razones {
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: -300px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
     }
+
 }
 
 @media (max-width: 750px) {
@@ -492,8 +500,11 @@ footer {
     }
 
     /* razones mobile */
-    .razones {
-        background-position: -420px;
-        margin: 0;
+    .razones-contenedor {
+        .razones {
+            background-position: -420px;
+            margin: 0;
+        }
     }
+   
 }
