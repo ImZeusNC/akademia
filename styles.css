@@ -209,6 +209,15 @@ header {
             display: grid;
             grid-template-rows: 60px 40px auto 60px;
 
+            img {
+                height: 90px;
+                width: 90px;
+                border-radius: 100%;
+                position: absolute;
+                left: calc(50% - 30px);
+                top: 20px;
+            }
+
             .carrusel-item-title {
                 align-items: center;
                 display: flex;
@@ -232,6 +241,7 @@ header {
             }
 
             .carrusel-item-lang {
+                border-top: var(--azul-principal) solid 2px;
                 font-weight: 300;
                 padding: 0px 50px;
             }
@@ -344,6 +354,20 @@ footer {
     }
 }
 
+@media (min-width: 1080px) and (max-width: 1280px) {
+    .carrusel {
+        .carrusel-item {
+            .carrusel-item-title {
+                img {
+                    height: auto;
+                    width: 70px;
+                    top: 35px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1080px) {
 
     /* header mobile */
@@ -446,6 +470,7 @@ footer {
 
             i {
                 grid-area: arrow;
+                padding: 30px;
             }
         }
     }
@@ -492,6 +517,17 @@ footer {
     .carrusel {
         .carrusel-item {
             font-size: 16px !important;
+
+            .carrusel-item-title {
+                img {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                    height: auto;
+                    width: 50px;
+                }
+            }
+
             .carrusel-item-lang {
                 padding-left: 50px !important;
                 padding-right: 0px !important;

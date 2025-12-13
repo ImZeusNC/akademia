@@ -24,7 +24,7 @@
             <li><a href="#quienes-somos">¿Quiénes somos?</a></li>
             <li><a href="#que-ofrecemos">¿Qué ofrecemos?</a></li>
             <li><a href="#por-que-elegirnos">¿Por qué elegirnos?</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </div>
         <div class="social-media">
@@ -43,7 +43,7 @@
       <section class="portada" id="portada-section">
         <article class="portada-titulo">
             <h2>Akademia Axios</h2>
-            <p>Desde la antigüedad, el conocimiento fue la mayor virtud.<br>En Akademia Axios continuamos ese legado.</p>
+            <p>Desde la antigüedad, el conocimiento fue la mayor virtud.<br>En Akademia Axios, continuamos ese legado.</p>
             <button>Crea tu cuenta</button>
           </article>
         <article class="portada-imagen">
@@ -77,6 +77,7 @@
               <div class="carrusel-item-title">
                 <p>Zeus</p>
                 <p>Instructor-Staff</p>
+                <img src="zeus.webp">
               </div>
               <div class="carrusel-item-body-redes">
                 <a href="#">
@@ -84,7 +85,7 @@
                 </a>
               </div>
               <div class="carrusel-item-body">
-                <p>Hola, mi nombre es Zeus, y esto, es una prueba!</p>
+                <p>Buenas, yo soy Zeus, el instructor principal de la academia y quien se encargara de recibirte cuando te unas al servidor de Discord. Soy estudiante de Ingenieria informatica y backend development con Spring boot, me gusta el cafe, leer filosofia y estudiar griego. Mis lenguajes que manejo son principalmente Java y Ensamblador, pero, también toco C#, C++ y Python.</p>
               </div>
               <div class="carrusel-item-lang">
                 <p>Java, Ensamblador, Python, C#</p>
@@ -96,6 +97,7 @@
               <div class="carrusel-item-title">
                 <p>Zal</p>
                 <p>Dueño-Creador</p>
+                <img src="zal.webp">
               </div>
               <div class="carrusel-item-body-redes">
                 <a href="#">
@@ -103,10 +105,10 @@
                 </a>
               </div>
               <div class="carrusel-item-body">
-                <p>Hola, mi nombre es Zal, y esto, es una prueba!</p>
+                <p>Hola, soy Angel, fundador de la academia con el objetivo de llevar el aprendizaje a más personas. Soy estudiante de Medicina y docente de Física, Química y Cívica a nivel preuniversitario.</p>
               </div>
               <div class="carrusel-item-lang">
-                <p>Java, Ensamblador, Python, C#</p>
+                <p>Física, Química</p>
               </div>
             </div>
 
@@ -122,10 +124,10 @@
                 </a>
               </div>
               <div class="carrusel-item-body">
-                <p>Hola, mi nombre es Moon, y esto, es una prueba!</p>
+                <p>Management of Information Systems student focusing on Network Infrastructure and Cybersecurity. Dedicated to mastering the strategic aspects of digital security, specifically Risk Management and Incident Response. Aspiring to evolve into a CISO role by building a strong technical foundation. Currently advancing skills in Network Security (Cisco/Fortinet) and Access Control, with a roadmap directed toward Cloud Security and Infrastructure hardening.</p>
               </div>
               <div class="carrusel-item-lang">
-                <p>Java, Ensamblador, Python, C#</p>
+                <p>Ciberseguridad, Configuracion de redes</p>
               </div>
             </div>
           </article>
@@ -166,14 +168,20 @@
     <script type="module">
       import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs'
       var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        speed: 600,
+        effect: 'slide',
+     });
     </script>
 
   </body>
