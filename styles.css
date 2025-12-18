@@ -106,7 +106,7 @@ header {
     grid-template-rows: auto auto;
 
     .portada {
-        min-height: 700px;
+        min-height: 900px;
         padding: 0px 5%;
         display: grid;
         flex-direction: row;
@@ -118,7 +118,7 @@ header {
         grid-template-rows: auto 80px;
 
         .portada-titulo {
-            min-width: 45%;
+            min-width: 50%;
             display: flex;
             color: white;
             padding: 20px;
@@ -126,6 +126,7 @@ header {
             text-align: left;
 
             button {
+                font-family: 'Inter';
                 cursor: pointer;
                 background-color: white;
                 padding: 7px;
@@ -154,7 +155,7 @@ header {
         }
 
         .portada-imagen {
-            height: 100%;
+            height: 80%;
             align-content: center;
             text-align: center;
             img {
@@ -275,7 +276,7 @@ header {
         display: grid;
         grid-template-columns: repeat(4, auto);
         grid-template-rows: repeat(3, auto);
-        gap: 25px;
+        gap: 15px;
 
         .servicios-grid-item {
             padding: 20px 20px;
@@ -497,8 +498,10 @@ footer {
     .servicios {
         .servicios-grid {
             grid-template-columns: repeat(2, auto);
+            gap: 5px;
             .servicios-grid-item {
-                padding: 20px 15px;
+                align-content: center;
+                padding: 20px 10px;
             }
         }
     }
@@ -520,7 +523,26 @@ footer {
 
     .header-title {
         h1 {
-            font-size: large;
+            font-size: x-large;
+        }
+    }
+
+    .portada {
+        .portada-titulo {
+            h2 {
+                font-size: xx-large !important;
+            }
+        }
+    }
+
+    /* informacion mobile */
+    .informacion {
+        .cascada {
+            .cascada-item {
+                h2 {
+                    font-size: xx-large;
+                }
+            }
         }
     }
 
@@ -546,11 +568,33 @@ footer {
         }
     }
 
+    /* servicios mobile */
+    .servicios {
+        padding: 20px 10px;
+
+        h2 {
+            font-size: xx-large;
+        }
+
+        .servicios-grid {
+            padding: 0;
+            margin: 0;
+            gap: 1px;
+            .servicios-grid-item:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
     /* razones mobile */
     .razones-contenedor {
         .razones {
             background-position: -420px;
             margin: 0;
+
+            h2 {
+                font-size: xx-large;
+            }
         }
     }
    
