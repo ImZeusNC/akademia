@@ -310,7 +310,7 @@ header {
     background-color: white;
 
     .razones {
-        background-image: url(/razones-bg.png);
+        background-image: url(razones-bg.png);
         background-repeat: round;
         background-size: cover;
         margin: 0px 80px;
@@ -517,6 +517,12 @@ footer {
 }
 
 @media (max-width: 750px) {
+
+    .header-title {
+        h1 {
+            font-size: large;
+        }
+    }
 
     /* carrusel mobile */
     .carrusel {
