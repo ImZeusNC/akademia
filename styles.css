@@ -100,7 +100,6 @@ header {
     background-color: var(--azul-secundario);
     width: 100%;
     min-height: 750px;
-    height: 100vh;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
