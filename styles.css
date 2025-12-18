@@ -125,6 +125,22 @@ header {
             flex-direction: column;
             text-align: left;
 
+            button {
+                cursor: pointer;
+                background-color: white;
+                padding: 7px;
+                font-size: medium;
+                border: black solid 1px;
+                border-radius: 1px;
+                font-weight: bolder;
+                width: 150px;
+
+                a {
+                    text-decoration: none;
+                    color: var(--azul-secundario);
+                }
+            }
+
             h2 {
                 margin: 0;
                 text-align: left;
@@ -135,17 +151,6 @@ header {
                 text-align: left;
             }
 
-            button {
-                cursor: pointer;
-                background-color: white;
-                padding: 7px;
-                font-size: medium;
-                border: black solid 1px;
-                border-radius: 1px;
-                color: var(--azul-secundario);
-                font-weight: bolder;
-                width: 150px;
-            }
         }
 
         .portada-imagen {
